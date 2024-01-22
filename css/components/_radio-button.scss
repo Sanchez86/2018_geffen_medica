@@ -1,0 +1,125 @@
+input[type='radio'] {
+  &.image {
+    display: none;
+    & + label {
+      position: relative;
+      padding-right: 40px;
+      font-size: 14px;
+      line-height: 22px;
+      word-spacing: 0;
+      color: #05365f;
+      span {
+        font-family: 'EXO2.0-REGULAR_0';
+        font-size: 14px;
+      }
+
+      &:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #00305b;
+        border-radius: 50%;
+        background-color: #ffffff;
+        transition: background-color 0.25s;
+      }
+      &:before {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        /*content: "";*/
+        display: inline-block;
+        width: 8px;
+        height: 6px;
+        background-image: url(../img/icons/confirm_icon.png);
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+    }
+
+    &:checked + label:before {
+      content: "";
+      background-image: url(../img/icons/confirm_active_icon.png);
+    }
+    &:checked + label:after {
+      background-color: #00305b;
+    }
+  }
+  &.circle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+    & + label {
+      position: relative;
+      padding-right: 30px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #05365f;
+      cursor: pointer;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #d1d1d1;
+        border-radius: 50%;
+        background: #ffffff;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #00305b;
+        opacity: 0;
+        transition: .2s;
+      }
+    }
+
+    &:checked + label:before {
+      border-color: #00305b;
+    }
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  &.color_black {
+    input[type='radio'] {
+      &.image {
+        & + label {
+          background-color: transparent!important;
+          &:after {
+            border-color: #edff00;
+            background-color: transparent;
+          }
+        }
+      }
+      &.circle {
+        & + label {
+          background-color: transparent!important;
+          &:after {
+            border-color: #edff00;
+            background-color: #edff00;
+          }
+        }
+        &:checked + label:before {
+          border-color: #edff00;
+        }
+      }
+    }
+  }
+}

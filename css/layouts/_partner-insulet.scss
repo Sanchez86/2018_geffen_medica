@@ -1,0 +1,30 @@
+.partners-inner {
+  &.insulet {
+    .info-block-outer-wrapper {
+      .info-block-outer {
+        .info-block-wrapper {
+          .info-block {
+            &:before {
+              width: calc(100% - 365px);
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(extra-small) {
+    &.insulet {
+      .info-block-outer-wrapper {
+        .info-block-outer {
+          .info-block-wrapper {
+            .info-block {
+              &:before {
+                width: calc(100% - 198px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

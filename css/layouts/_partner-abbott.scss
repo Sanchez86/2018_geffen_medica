@@ -1,0 +1,30 @@
+.partners-inner {
+  &.abbott {
+    .info-block-outer-wrapper {
+      .info-block-outer {
+        .info-block-wrapper {
+          .info-block {
+            &:before {
+              width: calc(100% - 185px);
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(extra-small) {
+    &.abbott {
+      .info-block-outer-wrapper {
+        .info-block-outer {
+          .info-block-wrapper {
+            .info-block {
+              &:before {
+                width: calc(100% - 100px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

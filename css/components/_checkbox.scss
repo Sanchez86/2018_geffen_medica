@@ -1,0 +1,32 @@
+.checkbox-input {
+  display: none;
+  &.simple {
+    & + label {
+      position: relative;
+      padding-right: 30px;
+      font-size: 14px;
+      line-height: 22px;
+      word-spacing: 0;
+      color: #05365f;
+      span {
+        font-family: 'EXO2.0-REGULAR_0';
+        font-size: 14px;
+      }
+
+      &:before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: "";
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        background: url(../img/icons/check_radio_sheet0.png) left top no-repeat;
+      }
+    }
+
+    &:checked + label:before {
+      background: url(../img/icons/check_radio_sheet0.png) -19px top no-repeat;
+    }
+  }
+}

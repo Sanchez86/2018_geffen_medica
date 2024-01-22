@@ -1,0 +1,295 @@
+.partners-inner {
+  h2 {
+    margin-bottom: 30px;
+    color: #002f5a;
+  }
+  .info-block-outer-wrapper {
+    .info-block-outer {
+      position: relative;
+      font-size: 0;
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 330px;
+      }
+      .info-block-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        padding: 50px 20px 20px 20px;
+        background-color: rgba(5, 54, 95, 0.33);
+        .info-block {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border: 1px solid #ffffff;
+          border-top: none;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1px;
+            background-color: #ffffff;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 1px;
+            width: 20px;
+            background-color: #ffffff;
+          }
+          .logo {
+            position: absolute;
+            top: 68px;
+            right: 55px;
+            width: 30%;
+            max-width: 297px;
+          }
+          .name {
+            position: absolute;
+            top: -13px;
+            right: 20px;
+            padding: 0 35px;
+            font-family: 'EXO2.0-REGULAR_0';
+            font-size: 26px;
+            font-weight: 400;
+            text-transform: uppercase;
+            background-color: transparent;
+            color: #ffffff;
+          }
+          .link {
+            display: block;
+            position: absolute;
+            bottom: 30px;
+            right: 55px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            transition: border-color .5s;
+            &:before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translateX(-50%) translateY(-50%);
+              width: 20px;
+              height: 18px;
+              background-image: url(../img/icons/link_icon.png);
+              background-repeat: no-repeat;
+            }
+            &:hover {
+              border-color: #093a63;
+              background-color: #ffffff;
+            }
+            &:hover:before {
+              background-image: url(../img/icons/link_icon_hover.png);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .desc {
+    margin-top: 30px;
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 21px;
+      color: #05365f;
+      span {
+        font-family: 'EXO2.0-SEMIBOLD_0';
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .btn-back {
+    display: inline-block;
+    position: relative;
+    width: 159px;
+    height: 42px;
+    margin-top: 75px;
+    margin-bottom: 100px;
+    padding-left: 10px;
+    border: 1px solid #093a63;
+    border-radius: 30px;
+    background-color: rgba(5, 54, 95, 0);
+    font-family: 'OPENSANSHEBREW-REGULAR_0';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #093a63;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 14px;
+      background-image: url(../img/icons/right_arrow.png);
+      transition: all .5s;
+    }
+    &:hover {
+      color: #ffffff;
+      background-color: #093a63;
+    }
+    &:hover:before {
+      left: 15px;
+      background-image: url(../img/icons/right_arrow_hover.png);
+    }
+  }
+
+  @include breakpoint(medium) {
+    .info-block-outer-wrapper {
+      .info-block-outer {
+        .info-block-wrapper {
+          .info-block {
+            .logo {
+              top: auto;
+              bottom: 30px;
+              right: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(extra-small) {
+    .info-block-outer-wrapper {
+      padding: 15px 15px 11px 15px;
+      .info-block-outer {
+        .info-block-wrapper {
+          padding: 30px 20px 20px 20px;
+          .info-block {
+            .logo {
+              bottom: 10px;
+              right: 100px;
+            }
+            .name {
+              top: -7px;
+              right: 20px;
+              padding: 0 15px;
+              font-size: 14px;
+            }
+            .link {
+              width: 30px;
+              height: 30px;
+              bottom: 10px;
+              right: 35px;
+              &:before {
+                width: 14px;
+                height: 13px;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+    .desc {
+      margin-top: 20px;
+      p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .btn-back {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include breakpoint(mobile-landscape) {
+    .info-block-outer-wrapper {
+      padding: 15px 15px 11px 15px;
+      .info-block-outer {
+        .info-block-wrapper {
+          padding: 30px 20px 20px 20px;
+          .info-block {
+            .link {
+              width: 30px;
+              height: 30px;
+              &:before {
+                width: 14px;
+                height: 13px;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+    .desc {
+      margin-top: 20px;
+      p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .btn-back {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .info-block-outer-wrapper {
+      padding: 10px;
+      .info-block-outer {
+        .info-block-wrapper {
+          padding: 10px;
+          .info-block {
+            .logo {
+              width: 50%;
+              bottom: 10px;
+              right: 100px;
+            }
+            .name {
+              top: -7px;
+              right: 20px;
+              padding: 0 15px;
+              font-size: 14px;
+            }
+            .link {
+              width: 30px;
+              height: 30px;
+              bottom: 10px;
+              right: 35px;
+              &:before {
+                width: 14px;
+                height: 13px;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+    .desc {
+      margin-top: 20px;
+      p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .btn-back {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

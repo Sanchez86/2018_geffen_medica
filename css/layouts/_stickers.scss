@@ -1,0 +1,367 @@
+.stickers {
+  padding: 30px 0;
+  .view {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    padding-top: 100%;
+    text-align: center;
+    .wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 80px;
+      box-shadow: 0px 0px 1px 0px rgba(0, 0, 1, 0.39);
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .caption {
+    position: relative;
+    float: right;
+    width: 306px;
+    margin-bottom: 35px;
+    background-color: #05365f;
+    h3 {
+      font-family: 'EXO2.0-SEMIBOLD_0';
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 65px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+  .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #05365f;
+  }
+  ul {
+    float: right;
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #05365f;
+    li {
+      position: relative;
+      margin-bottom: 7px;
+      padding-right: 20px;
+      span {
+        font-family: 'EXO2.0-REGULAR_0';
+        font-weight: 400;
+      }
+      &:first-child {
+        margin-top: 30px;
+      }
+      &:before {
+        position: absolute;
+        top: 7px;
+        right: 0;
+        content: "";
+        width: 7px;
+        height: 7px;
+        box-sizing: content-box;
+        border: 1px solid #153d91;
+        border-radius: 50%;
+      }
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #55a6ce;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 19px;
+    color: #05365f;
+  }
+
+  .price-block {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #cfcfcf;
+    .wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      h5 {
+        font-size: 14px;
+        text-decoration: underline !important;
+        text-decoration-color: #c1ced8 !important;
+        text-align: left;
+        color: #093a63;
+      }
+      h4 {
+        font-family: 'OPENSANSHEBREW-REGULAR_0';
+        font-size: 36px;
+        font-weight: 400;
+        color: #093a63;
+      }
+      p {
+        margin-bottom: 15px;
+        font-family: 'OPENSANSHEBREW-REGULAR_0';
+        font-size: 18px;
+        font-weight: 400;
+        color: #093a63;
+      }
+      h6 {
+        font-family: 'OPENSANSHEBREW-REGULAR_0';
+        font-size: 28px;
+        font-weight: 400;
+        color: #4386ad;
+      }
+      span {
+        font-family: 'OPENSANSHEBREW-REGULAR_0';
+        font-size: 14px;
+        font-weight: 600;
+        color: #4386ad;
+      }
+    }
+  }
+
+  .sticker-choose {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cfcfcf;
+    h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #093a63;
+    }
+    .sticker {
+      position: relative;
+      display: inline-block;
+      width: 75px;
+      height: 75px;
+      padding: 5px;
+      &.active {
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(77, 137, 171, 0.85);
+          background-image: url(../img/icons/select_icon.png);
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        &:after {
+          position: absolute;
+          top: 5px;
+          left: 0;
+          content: "יפורט ןג";
+          width: 100%;
+          font-size: 16px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .sticker-amount {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid #cfcfcf;
+    h3 {
+      align-self: center;
+      width: 75px;
+      font-size: 18px;
+      color: #093a63;
+    }
+    .counter {
+      width: 128px;
+      height: 41px;
+      text-align: center;
+      border: 1px solid #e1e1e1;
+      border-radius: 25px;
+      span {
+        padding: 0 10px;
+        font-family: 'OPENSANSHEBREW-REGULAR_0';
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 38px;
+        color: #4386ad;;
+        cursor: pointer;
+      }
+      .count {
+        font-family: 'OPENSANSHEBREW-REGULAR_0';
+        font-size: 24px;
+        font-weight: 400;
+        color: #093a63;
+        cursor: default;
+      }
+    }
+    .banner_blue {
+      position: static;
+      width: 150px;
+      height: 41px;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 39px;
+    }
+  }
+  .buttons-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cfcfcf;
+    .social-buttons {
+      align-self: center;
+      font-size: 0;
+      div {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        border: 1px solid #4386ad;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: border-color 0.5s;
+        &.repost:after, &.like:after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 16px;
+          height: 14px;
+          background-repeat: no-repeat;
+          background-size: 16px;
+        }
+        &.repost {
+          margin-right: 7px;
+          &:after {
+            background-image: url(../img/icons/omnipod_repost.png);
+          }
+        }
+        &.like {
+          &:after {
+            background-image: url(../img/icons/omnipod_like.png);
+          }
+          &.active {
+            background-color: #4386ad;
+            &:after {
+              background-image: url(../img/icons/omnipod_like_active.png);
+            }
+          }
+        }
+        &:hover {
+          border-color: transparent;
+        }
+
+      }
+    }
+    button {
+      position: relative;
+      width: 150px;
+      font-family: 'OPENSANSHEBREW-REGULAR_0';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 39px;
+      border: 1px solid #05365f;
+      border-radius: 22px;
+      background-color: transparent;
+      color: #093a63;
+      transition: background-color 0.5s;
+      &.grey {
+        border-color: transparent;
+        background-color: #d1dae2;
+        &:hover {
+          border: 1px solid #05365f;
+          background-color: #ffffff;
+        }
+      }
+      &.white {
+        &:hover {
+          background-color: #05365f;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .product_slider {
+    margin-top: 70px;
+    h2 {
+      &:before {
+        background-position: -175px;
+      }
+      &:after {
+        background-position: 0;
+      }
+    }
+    .product-carousel {
+      max-width: 1245px;
+      margin: 0 auto;
+      .item {
+        .product_img {
+          width: unset !important;
+        }
+      }
+      .carousel-control.left {
+        left: -45px;
+      }
+      .carousel-control.right {
+        right: -30px;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    .buttons-group {
+      flex-direction: column-reverse;
+      align-items: center;
+      button {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    .view {
+      margin-bottom: 50px;
+    }
+    .buttons-group {
+      flex-direction: row-reverse;
+      button {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .sticker-amount {
+      flex-direction: column;
+      align-items: center;
+      .counter, .banner_blue {
+        margin-top: 20px;
+      }
+    }
+    .buttons-group {
+      flex-direction: column-reverse;
+      align-items: center;
+      button {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

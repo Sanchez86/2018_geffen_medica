@@ -1,0 +1,30 @@
+.partners-inner {
+  &.vitrex {
+    .info-block-outer-wrapper {
+      .info-block-outer {
+        .info-block-wrapper {
+          .info-block {
+            &:before {
+              width: calc(100% - 175px);
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(extra-small) {
+    &.vitrex {
+      .info-block-outer-wrapper {
+        .info-block-outer {
+          .info-block-wrapper {
+            .info-block {
+              &:before {
+                width: calc(100% - 95px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

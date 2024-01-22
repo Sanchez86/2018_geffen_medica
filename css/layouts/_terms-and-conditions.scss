@@ -1,0 +1,51 @@
+.terms-and-conditions {
+  margin-bottom: 50px;
+  h2 {
+    margin-bottom: 30px;
+    color: #002f5a;
+  }
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #4689b4;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #05365f;
+  }
+
+  @include breakpoint(mobile-landscape) {
+    h2 {
+      margin-bottom: 0;
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 26px;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    h2 {
+      margin-bottom: 0;
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 30px;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    font-family: 'EXO2.0-REGULAR_0';
+    font-size: 16px;
+    font-weight: 300;
+    text-align: right;
+    border: 1px solid #bababa;
+    background-color: #ffffff;
+    appearance: none;
+    color: #05365f;
+    outline: none;
+    transition: all 0.25s;
+
+    &::-webkit-input-placeholder {
+      @include placeholder-style;
+    }
+
+    &::-moz-placeholder {
+      @include placeholder-style;
+    }
+
+    &:-ms-input-placeholder {
+      @include placeholder-style;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #00305b;
+        outline-offset: 0;
+
+      &::-webkit-input-placeholder {
+          @include focus-placeholder-style;
+      }
+
+      &::-moz-placeholder {
+          @include focus-placeholder-style;
+      }
+
+      &:-ms-input-placeholder {
+          @include focus-placeholder-style;
+      }
+    }
+
+    &[disabled],
+    &[readonly] {
+        cursor: default;
+        background-color: #eee;
+    }
+}
+
+body {
+  &.color_black {
+    form textarea {
+      & + span {
+        background-color: transparent!important;
+      }
+    }
+  }
+}

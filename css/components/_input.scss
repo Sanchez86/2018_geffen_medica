@@ -1,0 +1,73 @@
+form input[type='text'], .form input[type='text'],
+form input[type='email'], .form input[type='email'],
+form input[type='password'], .form input[type='password'] {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    font-family: 'EXO2.0-REGULAR_0';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: right;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    appearance: none;
+    border: 1px solid #d8d8d8;
+    color: #00305b;
+    outline: none;
+    transition: all 0.25s;
+
+    &::-webkit-input-placeholder {
+      @include placeholder-style;
+    }
+
+    &::-moz-placeholder {
+      @include placeholder-style;
+    }
+
+    &:-ms-input-placeholder {
+      @include placeholder-style;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #00305b;
+        outline-offset: 0;
+
+      &::-webkit-input-placeholder {
+          @include focus-placeholder-style;
+      }
+
+      &::-moz-placeholder {
+          @include focus-placeholder-style;
+      }
+
+      &:-ms-input-placeholder {
+          @include focus-placeholder-style;
+      }
+    }
+
+    &[disabled],
+    &[readonly] {
+        cursor: default;
+        background-color: #eee;
+    }
+}
+
+body {
+    &.color_black {
+        form input[type='text'], .form input[type='text'],
+        form input[type='email'], .form input[type='email'],
+        form input[type='password'], .form input[type='password'] {
+            &:focus {
+                border-color: #edff00;
+            }
+            & + label {
+                background-color: transparent!important;
+            }
+        }
+    }
+}
